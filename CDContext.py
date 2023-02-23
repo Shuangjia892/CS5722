@@ -28,5 +28,8 @@ class MusicPlayer:
     def play(self, title):
         self.cd_player.play(title)
 
+    def on_track_finished(self, track):
+        print("Track finished:", track)
+
 music_player = MusicPlayer()
-music_player.play("Stairway to Heaven")
+music_player.cd_player.playTrack(1, on_track_finished_callback=music_player.on_track_finished)
