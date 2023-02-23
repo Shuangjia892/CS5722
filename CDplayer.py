@@ -4,6 +4,7 @@ class CdPlayer:
         self.currentTrack = 0
         self.amplifier = amplifier
         self.title = None
+        self.on_track_finished_callback = None
 
     def on(self):
         print(self.description + " on")
